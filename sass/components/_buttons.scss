@@ -1,0 +1,104 @@
+.btn{
+    &,
+    &:link, &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative;
+        font-size: $default-font-size;
+
+        //Change for the <button> element
+        border: 0;
+        cursor: pointer;
+    }
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    }
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .5s;
+    }
+
+    &--animated{
+        animation: moveInBottom 1s ease-in .75s;
+        animation-fill-mode: backwards;
+    }
+
+    &--white{
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after{
+            background-color: $color-white;
+        }
+        &:hover::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    &--green{
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after{
+            background-color: $color-primary;
+        }
+        &:hover::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &--book{
+        padding: 1rem 2rem;
+    }
+   
+}
+.btn-text{
+
+    font-size: $default-font-size;
+
+    &:link, 
+    &:visited{
+        display: inline-block;
+        text-decoration: none;
+        padding: 3px;
+        color: $color-primary;
+        transition: all .2s;
+        border-bottom: 1px solid $color-primary;
+    }
+
+    &:hover{
+        font-weight: 700;
+        color: $color-white;
+        background-color: $color-primary;
+        padding: 5px;
+        transform: translateY(-2px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);    
+    }
+
+    &:active{
+        transform: translateY(0);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);    
+    }
+
+    &-position{
+        text-align: center;
+    }
+}
