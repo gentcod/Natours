@@ -5,9 +5,10 @@
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 2rem rgba($color-black, 0.2);
-    transition: all .3s;
+    transition: transform .3s;
 
     &-icons{
+    display: inline-block;
     font-family: 'Material Icons';
     font-style: normal;
     font-size: 6rem;
