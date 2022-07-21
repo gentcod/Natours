@@ -2,13 +2,16 @@
   "name": "starter",
   "version": "1.0.0",
   "description": "Landing page for natours",
-  "main": "index.js",
+  "source": "index.html",
   "scripts": {
-    "compile-sass": "node-sass sass/main.scss css/style.css -w"
+    "compile-sass": "node-sass sass/main.scss css/style.css -w",
+    "start": "parcel",
+    "build": "parcel build index.html --dist-dir dist"
   },
   "author": "Oyefule",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
     "node-sass": "^7.0.1",
     "parcel": "^2.6.2"
   }
